@@ -7,6 +7,11 @@ const getList = () => {
   ];
 };
 
+const getColor = () => {
+  return "#ff00ff";
+};
+
 WordCloud(document.getElementById("cloud_canvas"), {
-  list: getList()
+  list: getList(),
+  color: getColor
 });
