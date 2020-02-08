@@ -23,6 +23,7 @@
     }
   },
   "scripts": {
-    "bundle": "webpack"
+    "bundle": "webpack",
+    "watch:bundle": "webpack --watch"
   }
 }
