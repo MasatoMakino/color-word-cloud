@@ -7,9 +7,14 @@
   "author": "Masato Makino",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-loader": "^8.0.6",
     "husky": "^4.2.1",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
     "wordcloud": "^1.1.1"
   },
   "husky": {
