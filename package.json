@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://MasatoMakino@github.com/MasatoMakino/color-word-cloud.git",
   "author": "Masato Makino",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "wordcloud": "^1.1.1"
+  }
 }
