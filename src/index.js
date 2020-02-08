@@ -6,5 +6,3 @@ WordCloud(document.getElementById("cloud_canvas"), {
     ["bar", 48]
   ]
 });
-
-console.log("hello world");
