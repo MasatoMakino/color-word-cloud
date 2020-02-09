@@ -12,7 +12,6 @@ export async function load() {
       })
       .then(json => {
         entries = json.feed.entry;
-        console.log(entries);
         resolve();
       })
       .catch(function(err1) {
@@ -35,5 +34,11 @@ export function getColor(word, weight, fontSize, distance, theta) {
 export function getList() {
   return entries.map(entry => {
     return [entry.gsx$color.$t, 64];
+  });
+}
+
+export function getColorNames() {
+  return entries.map(entry => {
+    return entry.gsx$color.$t;
   });
 }
