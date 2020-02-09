@@ -29,3 +29,9 @@ export function getColor(word, weight, fontSize, distance, theta) {
   }
   return "#330033";
 }
+
+export function getList() {
+  return entries.map(entry => {
+    return [entry.gsx$color.$t, 64];
+  });
+}
