@@ -1,3 +1,5 @@
+import fetch from "node-fetch";
+
 let entries;
 const url =
   "https://spreadsheets.google.com/feeds/list/1uGluGMd7v8Dujez_u903wKAvtufwCLL178AYL9bdpOY/1/public/values?alt=json";
