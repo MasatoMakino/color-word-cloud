@@ -10,7 +10,9 @@
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
     "babel-loader": "^8.0.6",
+    "google-trends-api": "^4.9.0",
     "husky": "^4.2.1",
+    "node-fetch": "^2.6.0",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
     "webpack": "^4.41.5",
@@ -24,6 +26,9 @@
   },
   "scripts": {
     "bundle": "webpack",
-    "watch:bundle": "webpack --watch"
+    "watch:bundle": "webpack --watch",
+    "lib": "webpack --config webpack.node.config.js",
+    "watch:lib": "webpack --config webpack.node.config.js --watch",
+    "trends": "node ./lib/bundle.js"
   }
 }
