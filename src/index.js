@@ -1,20 +1,18 @@
 import * as WordCloud from "wordcloud";
-import { load } from "./SheetLoader";
+import { load, getColor } from "./SheetLoader";
 
 const getList = () => {
   return [
-    ["foo", 64],
-    ["bar", 48]
+    ["IVORY", 64],
+    ["CREAM", 48]
   ];
 };
 
-const getColor = () => {
-  return "#ff00ff";
-};
-
-load();
-
-WordCloud(document.getElementById("cloud_canvas"), {
-  list: getList(),
-  color: getColor
-});
+async function main() {
+  await load();
+  WordCloud(document.getElementById("cloud_canvas"), {
+    list: getList(),
+    color: getColor
+  });
+}
+main();
