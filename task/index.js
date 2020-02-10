@@ -1,9 +1,9 @@
+import fs from "fs";
 import { load, getColorNames } from "../src/SheetLoader";
 import { interestOverTime } from "google-trends-api";
 
 async function getTrend(words) {
   words = ["IVORY", ...words];
-  console.log(words);
 
   return new Promise((resolve, reject) =>
     interestOverTime({ keyword: words })
@@ -15,7 +15,6 @@ async function getTrend(words) {
         const resultSet = words.map((name, index) => {
           return [name, averages[index] * correction];
         });
-        console.log(resultSet);
         resolve(resultSet);
       })
       .catch(e => {
@@ -28,10 +27,15 @@ async function main() {
   await load();
   const words = getColorNames();
 
+  let result = [];
   const n = 4;
   while (0 < words.length) {
-    await getTrend(words.splice(0, n));
+    const trends = await getTrend(words.splice(0, n));
+    result = result.concat(trends);
   }
+
+  const json = JSON.stringify(result);
+  fs.writeFileSync("./docs/trend.json", json);
 }
 
 main();
