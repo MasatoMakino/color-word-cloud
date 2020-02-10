@@ -31,7 +31,7 @@ async function main() {
   const n = 4;
   while (0 < words.length) {
     const trends = await getTrend(words.splice(0, n));
-    result = result.concat(trends);
+    result = result.concat(trends.slice(1));
   }
 
   const json = JSON.stringify(result);
