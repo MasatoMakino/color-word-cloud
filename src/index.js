@@ -7,7 +7,7 @@ async function main() {
   await loadTrends();
 
   WordCloud(document.getElementById("cloud_canvas"), {
-    list: getList(0.2),
+    list: getList(0.05),
     color: getColor,
     backgroundColor: "#444",
     minSize: 1.0

@@ -17,7 +17,7 @@ export async function loadTrends() {
   });
 }
 
-export function getList(scale = 1.0, maxSize = 160) {
+export function getList(scale = 1.0, maxSize = 320) {
   return trends.map(color => {
     const size = Math.min(maxSize, color[1] * scale);
     return [color[0], size];
