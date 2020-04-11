@@ -1,22 +1,22 @@
-# wordcloud2モジュールの導入
+# wordcloud2パッケージの導入
 
-この章では、wordcloud2モジュールを導入し、ワードクラウドをブラウザで描画するまでを解説します。
+この章では、wordcloud2パッケージを導入し、ワードクラウドをブラウザで描画するまでを解説します。
 
     追加 : 文字色の変更用関数 d6507c6 2020/02/08 21:33
 
-このコミットまでが、この章の対象です。
+この章ではこのコミットまでを対象とします。
 
-## モジュールの導入
+## パッケージの導入
 
-まず、ワードクラウドを描画するモジュール[wordcloud2](https://github.com/timdream/wordcloud2.js)をインストールします。
+まず、ワードクラウドを描画するパッケージ[wordcloud2](https://github.com/timdream/wordcloud2.js)をインストールします。
 
 ```console
 npm install --save-dev wordcloud
 ```
 
-Visual Studio Codeのターミナルでこのコマンドを実行すると、npmサーバーからモジュールがダウンロード、インストールされます。
+Visual Studio Codeのターミナルでこのコマンドを実行すると、npmサーバーからパッケージがダウンロード、インストールされます。
 
-`package.json`の`devDependencies`に以下のようにモジュールが追加されていれば、インストールは成功です。
+`package.json`の`devDependencies`に以下のようにパッケージが追加されていれば、インストールは成功です。
 
 ```package.json
   "devDependencies": {
@@ -27,7 +27,7 @@ Visual Studio Codeのターミナルでこのコマンドを実行すると、np
 
 ## JavaScriptファイルからの呼び出し
 
-npm経由でインストールしたモジュールは、[import](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/import)文をつかってJavaScriptから読み込めます。
+npm経由でインストールしたパッケージは、[import](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/import)文をつかってJavaScriptから読み込めます。
 
 ```js
 import * as WordCloud from "wordcloud";
@@ -120,6 +120,12 @@ WordCloud(document.getElementById("cloud_canvas"), {
 
 ## 応用
 
-### npmでモジュールを探すためにはどうすればいいか？
+### npmでパッケージを探すためにはどうすればいいか？
 
-### npmでモジュールを公開するためにはどうすればいいか？
+#### APIドキュメントを読もう
+
+広く利用されているnpmパッケージには、ドキュメントが必ず整備されています。ドキュメントが不十分なパッケージをユーザーは利用しません。wordcloud2の場合、ドキュメントは[こちら](https://github.com/timdream/wordcloud2.js/blob/gh-pages/API.md)になります。公式のドキュメントは、もっとも信頼がおける一次情報源です。困ったら、まずドキュメントを読んでください。
+
+ドキュメントの理想は、誰が読んでも誤解しないことです。そのため簡単な英語で記述されています。難しい文法や単語を避けているので、機械翻訳にかけると一般の文章より比較的正確な訳が得られます。英語に抵抗がある場合、機械翻訳の利用も検討してください。
+
+### npmでパッケージを公開するためにはどうすればいいか？
