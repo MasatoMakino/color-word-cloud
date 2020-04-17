@@ -163,10 +163,12 @@ Google SpreadSheetから取得したJSONの構造が理解できたので、次�
 
 ### await / asyncとはなにか？
 
-JavaScriptを利用する場合、もっとも処理時間を必要とするのがストレージの読み書きです。たとえばデータベースから必要なデータを読み込むなど、ディスクアクセスが必要になる処理は待ち時間が必要になります。
+JavaScriptを利用する場合、もっとも処理時間を必要とするのが外部データの読み書きです。たとえばデータベースから必要なデータを読み込むなど、ディスクアクセスが必要になる処理は待ち時間が必要になります。また、ネットワーク越しにデータを読み込む場合にも接続と転送の待ち時間が生まれます。
 
-JavaScriptでは、このような待ち時間を有効活用するために、非同期処理という仕組みを利用します。読み書きの待ち時間の間は、他の処理を行いCPUと回線を最大限利用し続けます。
+JavaScriptでは、このような待ち時間を有効活用するために、非同期処理という仕組みを利用します。待ち時間の間は他の処理を行いCPUと回線を最大限利用し続けます。
 
-[Promise](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Using_promises)は非同期処理の完了を表すオブジェクトです。Promiseオブジェクトを利用する事で、非同期処理の完了後の処理を記述できます。
+従来のJavaScriptでは、非同期処理には[コールバック関数](https://developer.mozilla.org/ja/docs/Glossary/Callback_function)を利用していました。非同期処理を行う関数に、完了後に処理してほしい関数そのものを渡すという方法です。しかし、この方法はコードの可読性や管理に問題がありました。
 
-[await / async](https://wiki.developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/async_function)は非同期関数といいます。Promiseをより簡単に記述するために追加された文法です。
+そこで追加されたのが[Promise](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Using_promises)です。Promiseは非同期処理の処理状態を持つオブジェクトで、ES6(ES2015)で追加されました。コールバック関数は関数を渡しましたが、Promiseはオブジェクトが返ってきます。
+
+[await / async](https://wiki.developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/async_function)は非同期関数といいます。Promiseをより簡単に記述するためにES2017で追加された文法です。
