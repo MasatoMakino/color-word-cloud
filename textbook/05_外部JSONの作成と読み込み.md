@@ -167,8 +167,8 @@ JavaScriptを利用する場合、もっとも処理時間を必要とするの�
 
 JavaScriptでは、このような待ち時間を有効活用するために、非同期処理という仕組みを利用します。待ち時間の間は他の処理を行いCPUと回線を最大限利用し続けます。
 
-従来のJavaScriptでは、非同期処理には[コールバック関数](https://developer.mozilla.org/ja/docs/Glossary/Callback_function)を利用していました。非同期処理を行う関数に、完了後に処理してほしい関数そのものを渡すという方法です。しかし、この方法はコードの可読性や管理に問題がありました。
+従来のJavaScriptでは、非同期処理には[コールバック関数](https://developer.mozilla.org/ja/docs/Glossary/Callback_function)を利用していました。非同期処理を行う関数に、完了後に処理してほしい関数そのものを渡すという方法です。しかし、この方法はコードの可読性や管理に問題がありました。[Callback Hell（コールバック地獄）](https://techblog.yahoo.co.jp/javascript/nodejs/callback-to-promise/)と呼ばれる問題です。
 
-そこで追加されたのが[Promise](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Using_promises)です。Promiseは非同期処理の処理状態を持つオブジェクトで、ES6(ES2015)で追加されました。コールバック関数は関数を渡しましたが、Promiseはオブジェクトが返ってきます。
+そこで追加されたのが[Promise](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Using_promises)です。Promiseは非同期処理の処理状態を持つオブジェクトで、ES6(ES2015)で追加されました。コールバック関数は相手に関数を渡しましたが、Promiseはこちらにオブジェクトが返ってきます。コールバック関数よりもコードの管理がしやすくなりました。
 
-[await / async](https://wiki.developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/async_function)は非同期関数といいます。Promiseをより簡単に記述するためにES2017で追加された文法です。
+[await / async](https://wiki.developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/async_function)は非同期関数といいます。Promiseをより簡単に記述するためにES2017で追加された文法です。処理はPromiseとまったく同じですが、それをより短く記述するための文法です。
