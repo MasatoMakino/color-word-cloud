@@ -55,7 +55,7 @@ Google Trendsで取得できる値は絶対値ではなく相対値です。複�
 
 #### 3. Webブラウザー上では動作しない
 
-google-trends-apiパッケージは、node.js上で動作します。[Webブラウザー上では動作しません。](https://github.com/pat310/google-trends-api/issues/56)そのため、検索結果をファイルに保存してWebブラウザーで読み込む必要があります。
+google-trends-apiパッケージは、node.js上で動作します。[Webブラウザー上のJavaScriptでは動作しません。](https://github.com/pat310/google-trends-api/issues/56)そのため、検索結果をファイルに保存してWebブラウザーで読み込む必要があります。
 
 ## node.jsからGoogle Trend APIを利用する
 
