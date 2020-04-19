@@ -2,7 +2,7 @@
 
 > word cloud generator for color words.
 
-Google Trends API を利用した、色彩語ワードクラウドジェネレーターです。
+Google Trends APIを利用した、色彩語ワードクラウドジェネレーターです。
 
 ## デモページ
 
@@ -17,15 +17,15 @@ Google Trends API を利用した、色彩語ワードクラウドジェネレ�
 
 ## npm scripts
 
-"bundle": src ディレクトリ内の JavaScript コードをトランスパイルし、dist ディレクトリに出力します。Web ブラウザー上で動作する JavaScript コードが生成されます。
+"bundle": srcディレクトリ内のJavaScriptコードをトランスパイルし、distディレクトリに出力します。Webブラウザー上で動作するJavaScriptコードが生成されます。
 
-"watch:bundle": bundle コマンドに watch オプションを追加したコマンドです。
+"watch:bundle": bundleコマンドにwatchオプションを追加したコマンドです。
 
-"lib": task ディレクトリ内の JavaScript コードをトランスパイルし、lib ディレクトリに出力します。node.js 上で動作する JavaScript コードが生成されます。
+"lib": taskディレクトリ内のJavaScriptコードをトランスパイルし、libディレクトリに出力します。node.js上で動作するJavaScriptコードが生成されます。
 
-"watch:lib": lib コマンドに watch オプションを追加したコマンドです。
+"watch:lib": libコマンドにwatchオプションを追加したコマンドです。
 
-"trends": Google Trends API を利用して、色彩語使用頻度リストを docs ディレクトリに出力します。
+"trends": Google Trends APIを利用して、色彩語使用頻度リストをdocsディレクトリに出力します。
 
 ## License
 
