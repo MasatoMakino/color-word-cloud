@@ -8,6 +8,8 @@ Google Trends APIを利用した、色彩語ワードクラウドジェネレー
 
 [Demo page](https://masatomakino.github.io/color-word-cloud/)
 
+![](https://www.evernote.com/l/AAmDyd4ndq9PzquNUu-w3YT2RsLkS1fp3aEB/image.png)
+
 ## Getting Started
 
 このリポジトリをローカルにクローンしてください。
