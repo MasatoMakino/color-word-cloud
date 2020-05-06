@@ -2,6 +2,15 @@ import fs from "fs";
 import { load, getColorNames } from "../src/SheetLoader";
 import { interestOverTime } from "google-trends-api";
 
+/**
+ * スリープ処理を行う関数。
+ * ループ処理中に任意の時間処理を停止する。
+ * @param {number} milliseconds
+ */
+function sleep(milliseconds) {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
+}
+
 async function getTrend(words) {
   words = ["IVORY", ...words];
 
@@ -31,6 +40,7 @@ async function main() {
     const trends = await getTrend(words.splice(0, n));
     console.log(trends);
     result = result.concat(trends.slice(1));
+    await sleep(1000 * 5);
   }
 
   const json = JSON.stringify(result);
