@@ -5,22 +5,20 @@ import { interestOverTime } from "google-trends-api";
 async function getTrend(words) {
   words = ["IVORY", ...words];
 
-  return new Promise((resolve, reject) =>
-    interestOverTime({ keyword: words })
-      .then(results => {
-        return JSON.parse(results).default.averages;
-      })
-      .then(averages => {
-        const correction = 100 / averages[0];
-        const resultSet = words.map((name, index) => {
-          return [name, averages[index] * correction];
-        });
-        resolve(resultSet);
-      })
-      .catch(e => {
-        console.log(e);
-      })
-  );
+  return interestOverTime({ keyword: words })
+    .then((results) => {
+      return JSON.parse(results).default.averages;
+    })
+    .then((averages) => {
+      const correction = 100 / averages[0];
+      const resultSet = words.map((name, index) => {
+        return [name, averages[index] * correction];
+      });
+      return resultSet;
+    })
+    .catch((e) => {
+      console.log(e);
+    });
 }
 
 async function main() {
@@ -37,6 +35,7 @@ async function main() {
 
   const json = JSON.stringify(result);
   fs.writeFileSync("./docs/trend.json", json);
+  console.log("trend.jsonの出力が完了しました。");
 }
 
 main();
