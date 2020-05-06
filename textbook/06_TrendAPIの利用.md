@@ -116,6 +116,25 @@ libコマンドが`lib/bundle.js`をトランスパイルするコマンド、tr
 
 trendsコマンドを実行すると、Visual Studio Codeのコンソールに結果が出力されます。正常にGoogle Trendsが利用できていることが確認できました。
 
+### APIの呼び出し回数に注意
+
+APIの呼び出しは、APIを提供しているサーバーの処理能力を使います。そのため過剰にリクエストすると、制限がかけられます。
+
+例として、短時間に大量のリクエストを送ると以下のようなエラーが返ってきます。
+
+    SyntaxError: Unexpected token C in JSON at position 0
+        at JSON.parse (<anonymous>)
+        at a (/Users/makinomasato/Documents/projects/color-word-cloud/lib/bundle.js:1:4978)
+        at /Users/makinomasato/Documents/projects/color-word-cloud/lib/bundle.js:1:7059
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+      requestBody: `<!DOCTYPE html><html lang=en><meta charset=utf-8>
+      ...[中略]...
+      <p>We're sorry, but you have sent too many requests to us recently. Please try again later. <ins>That’s all we know.</ins></div>`
+    }
+
+エラーが返ってきた場合、呼び出し回数を削減できないか検討してください。
+
 * * *
 
 ## 注釈
