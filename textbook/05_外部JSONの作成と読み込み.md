@@ -28,7 +28,7 @@ npmコマンドは実行されるたびにこの管理ファイルを読み込�
 
 [Google SpreadSheet](https://www.google.com/intl/ja_jp/sheets/about/)で作成したデータは、インターネット経由でJSONとして読み込めます。この講義では、このJSON読み込みの機能を利用して、Google SpreadSheetをJavaScriptから読み込める色彩語辞書にします。
 
-まずはスプレッドシートファイルを作成し、A列に色の名前、B列に色の16進数コードを記入します。
+まずはスプレッドシートファイルを作成し、A列に色の名前、B列に色の16進数コードを記入します。このデータは、wikipediaの[Lists of colors](https://en.wikipedia.org/wiki/Lists_of_colors)のページを参照しています。
 
 ![](https://www.evernote.com/l/AAmHrx5pKR9K8JE09ITRBd9GlNCT3p9ChbYB/image.png)
 
