@@ -14,7 +14,7 @@ function sleep(milliseconds) {
 async function getTrend(words) {
   words = ["IVORY", ...words];
 
-  return interestOverTime({ keyword: words })
+  return interestOverTime({ keyword: words, geo: "JP" })
     .then((results) => {
       return JSON.parse(results).default.averages;
     })
