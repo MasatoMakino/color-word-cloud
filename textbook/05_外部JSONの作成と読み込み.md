@@ -18,6 +18,12 @@ JSONは「文字列←→変数を格納した[Object](https://developer.mozilla
 
 またJSONは構文が単純で、人間がそのまま読めます。ファイル形式を学習する必要がないのも利点です。
 
+### JSONの構文とデータ構造
+
+JSONの構文は[Ecmaインターナショナル](http://www.ecma-international.org/)という標準化団体によって[仕様が策定](http://www.ecma-international.org/publications/standards/Ecma-404.htm)されています。
+
+JSON内のデータ構造は、JSONの提供者が自由に決められます。第三者が提供するJSONデータを利用する場合、提供元が作成しているデータ仕様書を参照してください。
+
 ### package.json
 
 すでにこの講義の範囲で、JSONファイルを扱っています。npmパッケージの管理ファイル`package.json`がJSON形式のファイルです。
