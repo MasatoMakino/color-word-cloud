@@ -1,6 +1,6 @@
 {
   "name": "color-word-cloud",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "word cloud generator for color words.",
   "main": "index.js",
   "repository": "https://MasatoMakino@github.com/MasatoMakino/color-word-cloud.git",
