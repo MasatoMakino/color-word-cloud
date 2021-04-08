@@ -46,7 +46,7 @@ node.js上で外部JSONを読み込んだら、そのリストを分割してGoo
 
 検索結果をJSONファイルに保存します。node.jsの[fs (File System)](https://nodejs.org/api/fs.html) APIを使うとPC上にファイルを読み書きできます。結果は`docs/trends.js`というファイル名で保存し、Webブラウザー上から読み込めるようにします。
 
-* * *
+---
 
 ## 応用
 

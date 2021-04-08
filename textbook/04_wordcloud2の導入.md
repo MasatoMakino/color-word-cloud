@@ -45,7 +45,7 @@ webpackには他にも、cssや画像のまとめ上げの機能もあります�
 
 ```html
 <body>
-    <canvas id="cloud_canvas" width="640" height="480"></canvas>
+  <canvas id="cloud_canvas" width="640" height="480"></canvas>
 </body>
 ```
 
@@ -56,7 +56,7 @@ CanvasはJavaScriptで操作可能なビットマップ画像です。htmlやcss
 wordcloud2の[Simple usage](https://github.com/timdream/wordcloud2.js#simple-usage)に、描画用データの形式が指定されています。
 
 ```js
-WordCloud(document.getElementById('my_canvas'), { list: list } )
+WordCloud(document.getElementById("my_canvas"), { list: list });
 ```
 
 > where list is an array that look like this: \[['foo', 12], ['bar', 6]].
@@ -67,12 +67,12 @@ WordCloud(document.getElementById('my_canvas'), { list: list } )
 const getList = () => {
   return [
     ["foo", 64],
-    ["bar", 48]
+    ["bar", 48],
   ];
 };
 
 WordCloud(document.getElementById("cloud_canvas"), {
-  list: getList()
+  list: getList(),
 });
 ```
 
@@ -96,7 +96,7 @@ wordcloud2では、リストデータ内には色の情報を持たせられま�
 const getList = () => {
   return [
     ["foo", 64],
-    ["bar", 48]
+    ["bar", 48],
   ];
 };
 
@@ -106,9 +106,8 @@ const getColor = () => {
 
 WordCloud(document.getElementById("cloud_canvas"), {
   list: getList(),
-  color: getColor
+  color: getColor,
 });
-
 ```
 
 この関数は単純に#ff00ff（マゼンタ）を返すだけのものです。
@@ -118,7 +117,7 @@ WordCloud(document.getElementById("cloud_canvas"), {
 文字が指定された色に変化しました。
 これで色彩語に個別の色を指定する準備ができました。
 
-* * *
+---
 
 ## 応用
 

@@ -32,8 +32,8 @@ Webブラウザー上でこのサービスを利用できます。検索ワー�
 
 Google Trendsでは、複数のワードを入力するとそのワード同士の検索頻度を以下の2つの軸で比較できます。
 
--   時系列
--   地域
+- 時系列
+- 地域
 
 また、短期間に急激に注目を集めたワードをランキング形式で取得できます。
 
@@ -80,13 +80,13 @@ google-trends-apiパッケージのドキュメントから[サンプル](https:
 ```js
 import { interestOverTime } from "google-trends-api";
 
-interestOverTime({keyword: 'Valentines Day'})
-.then(function(results){
-  console.log(results);
-})
-.catch(function(err){
-  console.error(err);
-});
+interestOverTime({ keyword: "Valentines Day" })
+  .then(function (results) {
+    console.log(results);
+  })
+  .catch(function (err) {
+    console.error(err);
+  });
 ```
 
 import文はnode.jsではそのまま実行できない（注1）ので、このスクリプトもwebpack + babelでトランスパイルします。
@@ -135,14 +135,14 @@ APIの呼び出しは、APIを提供しているサーバーの処理能力を�
 
 エラーが返ってきた場合、呼び出し回数を削減できないか検討してください。
 
-* * *
+---
 
 ## 注釈
 
 1.node.jsのESM対応は現在進行中です。一部import文を利用できます。
 <https://nodejs.org/api/esm.html#esm_import_specifiers>
 
-* * *
+---
 
 ## 応用
 
