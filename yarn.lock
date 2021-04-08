@@ -1816,6 +1816,11 @@ pkg-dir@^4.1.0, pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
+prettier-plugin-md-nocjsp@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-md-nocjsp/-/prettier-plugin-md-nocjsp-1.0.2.tgz#61988ec980335fa11814056881b79e6d9942fd33"
+  integrity sha512-YeWPS+tbDVnCo67+IEYWum1gc0XmTnbChKH2ZNbQ2WurCPvx1kPkBbUpInzru5RXYmPk3Xq1SU1g4moPBSdacg==
+
 prettier@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
